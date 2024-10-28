@@ -1,0 +1,121 @@
+<html>
+<head><title></title>
+    
+    <style>
+
+        /* From Uiverse.io by Maximinodotpy */
+        .inputGroup {
+            font-family: 'Segoe UI', sans-serif;
+            margin: 1em 0 1em 0;
+            max-width: 190px;
+            position: relative;
+        }
+
+            .inputGroup input {
+                font-size: 100%;
+                padding: 0.8em;
+                outline: none;
+                border: 2px solid rgb(200, 200, 200);
+                background-color: transparent;
+                border-radius: 20px;
+                width: 100%;
+            }
+
+            .inputGroup label {
+                font-size: 100%;
+                position: absolute;
+                left: 0;
+                padding: 0.8em;
+                margin-left: 0.5em;
+                pointer-events: none;
+                transition: all 0.3s ease;
+                color: rgb(100, 100, 100);
+            }
+
+            .inputGroup :is(input:focus, input:valid) ~ label {
+                transform: translateY(-50%) scale(.9);
+                margin: 0em;
+                margin-left: 1.3em;
+                padding: 0.4em;
+                background-color: #e8e8e8;
+            }
+
+            .inputGroup :is(input:focus, input:valid) {
+                border-color: rgb(150, 150, 200);
+            }
+
+        /* From Uiverse.io by lenfear23 */
+        button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            outline: none;
+            cursor: pointer;
+            width: 150px;
+            height: 50px;
+            background-image: linear-gradient(to top, #D8D9DB 0%, #fff 80%, #FDFDFD 100%);
+            border-radius: 30px;
+            border: 1px solid #8F9092;
+            transition: all 0.2s ease;
+            font-family: "Source Sans Pro", sans-serif;
+            font-size: 14px;
+            font-weight: 600;
+            color: #606060;
+            text-shadow: 0 1px #fff;
+        }
+
+            button:hover {
+                box-shadow: 0 4px 3px 1px #FCFCFC, 0 6px 8px #D6D7D9, 0 -4px 4px #CECFD1, 0 -6px 4px #FEFEFE, inset 0 0 3px 3px #CECFD1;
+            }
+
+            button:active {
+                box-shadow: 0 4px 3px 1px #FCFCFC, 0 6px 8px #D6D7D9, 0 -4px 4px #CECFD1, 0 -6px 4px #FEFEFE, inset 0 0 5px 3px #999, inset 0 0 30px #aaa;
+            }
+
+            button:focus {
+                box-shadow: 0 4px 3px 1px #FCFCFC, 0 6px 8px #D6D7D9, 0 -4px 4px #CECFD1, 0 -6px 4px #FEFEFE, inset 0 0 5px 3px #999, inset 0 0 30px #aaa;
+            }
+
+
+
+        body {
+            background-image: url('https://static.vecteezy.com/system/resources/previews/047/456/958/non_2x/blue-fusion-abstract-background-design-vector.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #333;
+        }
+
+    </style>
+
+    </head>
+
+<body>
+
+    <form action="/view" method="post">
+        {%csrf_token %}
+
+
+
+        <div class="inputGroup">
+            <input type="text" required="" autocomplete="off" name="txt1" class="input">
+            <label for="name">Data 1</label>
+        </div>
+        <div class="inputGroup">
+            <input type="text" required="" autocomplete="off" name="txt2" class="input">
+            <label for="name">Data 2</label>
+        </div>
+
+        <button>
+            Button
+        </button>
+
+    </form>
+</body>
+</html>
